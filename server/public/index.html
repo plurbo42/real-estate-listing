@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <link rel="stylesheet" href="vendors/bootstrap.css">
+    <script src="vendors/angular.min.js"></script>
+    <script src="vendors/angular-route.min.js"></script>
+    <script src="scripts/client.js"></script>
+
+    <script src="scripts/controllers/home.controller.js"></script>
+    <script src="scripts/controllers/for-rent.controller.js"></script>
+    <script src="scripts/controllers/for-sale.controller.js"></script>
+
+    <script src="scripts/services/property.service.js"></script>
+
+    <title>Real Estate Listings</title>
+</head>
+<body ng-app="RealEstateApp">
+    <nav class="navbar navbar-inverse">
+        <a href="#!" class="navbar-brand">Home</a>
+        <a href="#!for-sale" class="navbar-brand">For Sale</a>
+        <a href="#!for-rent" class="navbar-brand">For Rent</a>
+    </nav>  
+    <ng-view></ng-view>
+</body>
+</html>
