@@ -1,3 +1,19 @@
 <div class="container">
     <h1>For Rent</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <th>Location</th>
+            <th>Square Footage</th>
+            <th>Rent</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="rental in vm.forRent.list">
+                <td>{{rental.city}}</td>
+                <td>{{rental.sqft}}</td>
+                <td>${{rental.rent}}</td>
+            </tr>
+        </tbody>
+    </table>
+
 </div>

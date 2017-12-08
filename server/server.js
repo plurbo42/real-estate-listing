@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 
 var mongooseConnection = require('./modules/mongoose-connection');
-//var game = require('./routes/movie.js');
+var property = require('./routes/property.js');
 
 var app = express();
 
@@ -14,7 +14,7 @@ app.use(express.static('server/public'));
 // database connection
 mongooseConnection.connect();
 
-//app.use('/movie', game);
+app.use('/property', property);
 
 var port = process.env.PORT || 5000;
 app.listen(port, function(){
