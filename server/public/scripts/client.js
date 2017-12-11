@@ -10,6 +10,9 @@ app.config(function($routeProvider) {
     }).when('/for-sale', {
         templateUrl: '/views/for-sale.html',
         controller: 'ForSaleController as vm'
+    }).when('/addproperty', {
+        templateUrl: '/views/addproperty.html',
+        controller: 'AddPropertyController as vm'
     }).otherwise({
         template: '<h1>404</h1>'
     });

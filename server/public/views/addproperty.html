@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>Add a New Property</h1>
+
+    <button class="btn btn-info" ng-click="vm.showListing=!showListing">Add For Sale Listing</button>
+    <button class="btn btn-info" ng-click="vm.showRental=!showRental">Add New Rental Property</button>
+
+    <br>
+    <p ng-show="vm.showListing">Listing</p>
+    <input ng-show="vm.showListing" type="text" ng-model="vm.newProperty.city" placeholder="Location">
+    <input ng-show="vm.showListing" type="number" ng-model="vm.newProperty.cost" placeholder="Cost">
+    <input ng-show="vm.showListing" type="number" ng-model="vm.newProperty.sqft" placeholder="Square Footage">
+    <button ng-show="vm.showListing" class="btn btn-success" ng-click="vm.addListing(vm.newProperty)">Submit</button>
+    {{vm.newProperty}}
+    <br>
+    <p ng-show="vm.showRental">Rental Property</p>
+    <input ng-show="vm.showRental" type="text" ng-model="vm.newRental.city" placeholder="Location">
+    <input ng-show="vm.showRental" type="number" ng-model="vm.newRental.rent" placeholder="Rent">
+    <input ng-show="vm.showRental" type="number" ng-model="vm.newRental.sqft" placeholder="Square Footage">
+    <button ng-show="vm.showRental" class="btn btn-success" ng-click="vm.addRental(vm.newRental)">Submit</button>
+
+    {{vm.newRental}}
+
+</div>

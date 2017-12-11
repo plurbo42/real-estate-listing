@@ -28,17 +28,28 @@ router.get('/for-sale', function(req, res){
     });
 });
 
-// router.post('/', function(req, res){
-//     // a get request for all games
-//     var addMovie = new Movie(req.body);
-//     addMovie.save(function(errorMakingDatabaseQuery, data){
-//         if (errorMakingDatabaseQuery) {
-//             console.log('error with game find', errorMakingDatabaseQuery);
-//             res.sendStatus(500);
-//         } else {
-//             res.sendStatus(200);
-//         }
-//     });
-// });
+router.post('/for-sale', function(req, res){
+    var addListing = new Listing(req.body);
+    addListing.save(function(errorMakingDatabaseQuery, data){
+        if (errorMakingDatabaseQuery) {
+            console.log('error with listingpost', errorMakingDatabaseQuery);
+            res.sendStatus(500);
+        } else {
+            res.sendStatus(200);
+        }
+    });
+});
+
+router.post('/for-rent', function(req, res){
+    var addRental = new Rental(req.body);
+    addRental.save(function(errorMakingDatabaseQuery, data){
+        if (errorMakingDatabaseQuery) {
+            console.log('error with rental post', errorMakingDatabaseQuery);
+            res.sendStatus(500);
+        } else {
+            res.sendStatus(200);
+        }
+    });
+});
 
 module.exports = router;
